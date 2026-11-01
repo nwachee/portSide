@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ibeagi Nwachinemere – Backend Developer</title>
+<meta name="description" content="Backend developer building secure, scalable APIs and Web3 apps with TypeScript, Node.js and PostgreSQL.">
+<meta name="theme-color" content="#171512">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ibeagi Nwachinemere – Backend Developer">
+<meta property="og:description" content="Secure, scalable APIs and Web3 apps with TypeScript, Node.js and PostgreSQL.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#171512;--surface:#1f1c18;--ink:#ece6dc;--muted:#a59d90;--line:#302b25;--accent:#d4a85a;--accent-ink:#1a1610;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "Bricolage Grotesque",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:4px}
+a:hover{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:920px;margin:0 auto;padding:0 24px}
+h1,h2,h3{margin:0;line-height:1.15;font-weight:700}
+
+/* nav */
+.top{position:sticky;top:0;z-index:10;background:rgba(23,21,18,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.top b{font-size:1.05rem;letter-spacing:-.01em}
+.top nav{display:flex;gap:22px}
+.top nav a{color:var(--muted);text-decoration:none;font-size:.95rem;padding:4px 0;border-bottom:2px solid transparent}
+.top nav a:hover{color:var(--ink)}
+.top nav a[aria-current="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;padding:88px 0 96px}
+.status{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:.95rem;margin-bottom:22px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+h1{font-size:clamp(2.4rem,5.4vw,3.8rem);letter-spacing:-.03em}
+.lead{font-size:1.15rem;color:var(--muted);max-width:36ch;margin:22px 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:6px;text-decoration:none;font-weight:500;border:1px solid var(--line);color:var(--ink)}
+.btn:hover{border-color:var(--muted);color:var(--ink)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.main:hover{filter:brightness(1.08);color:var(--accent-ink)}
+.resp{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;font:14px/1.75 "IBM Plex Mono",monospace}
+.resp header{display:flex;justify-content:space-between;gap:12px;padding:11px 16px;border-bottom:1px solid var(--line);color:var(--muted)}
+.resp .ok{color:var(--accent)}
+.resp pre{margin:0;padding:18px 16px;overflow-x:auto;white-space:pre}
+.k{color:var(--muted)}
+.t{color:var(--accent)}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:1.6rem;letter-spacing:-.02em;margin-bottom:36px}
+
+/* experience */
+.job{display:grid;grid-template-columns:170px 1fr;gap:6px 32px;margin-bottom:40px}
+.job time{color:var(--muted);font-size:.95rem;padding-top:3px}
+.job h3{font-size:1.1rem}
+.job .co{color:var(--muted);font-weight:400}
+.job ul{margin:10px 0 0;padding-left:18px;max-width:64ch;color:var(--muted)}
+.job li{margin-bottom:8px}
+.edu{color:var(--muted);margin:0;font-size:.95rem}
+
+/* projects */
+.feature{display:grid;grid-template-columns:200px 1fr;gap:8px 32px;padding:30px 0;border-top:1px solid var(--line)}
+.feature:first-of-type{padding-top:0;border-top:0}
+.feature h3{font-size:1.3rem}
+.feature p{margin:0 0 14px;color:var(--muted);max-width:60ch}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px;padding:0;list-style:none}
+.tags li{font-size:.85rem;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:2px 9px}
+.links{display:flex;gap:20px;flex-wrap:wrap;margin:0}
+.more{margin-top:28px;padding-top:36px;border-top:1px solid var(--line)}
+.more h3{font-size:1.05rem;margin-bottom:18px;color:var(--muted);font-weight:500}
+.row{display:grid;grid-template-columns:200px 1fr;gap:4px 32px;padding:14px 0}
+.row h4{margin:0;font-size:1.02rem;font-weight:500}
+.row p{margin:0;color:var(--muted);max-width:60ch}
+
+/* skills */
+.skills{display:grid;grid-template-columns:140px 1fr;gap:18px 32px;margin:0}
+.skills dt{color:var(--muted);padding-top:4px}
+.skills dd{margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:3px 12px;font-size:.95rem}
+
+/* contact */
+.contact p{max-width:50ch;color:var(--muted);margin:0 0 28px}
+footer{padding:28px 0 44px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+
+@media(max-width:760px){
+  .hero{grid-template-columns:1fr;padding:56px 0 64px;gap:40px}
+  .job,.feature,.row{grid-template-columns:1fr}
+  .skills{grid-template-columns:1fr;gap:6px}
+  .skills dd{margin-bottom:14px}
+  section{padding:56px 0}
+  .top nav{gap:16px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <b>Nwachee</b>
+    <nav aria-label="Sections">
+      <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <p class="status"><i aria-hidden="true"></i>Open to backend and full-stack roles</p>
+      <h1>Ibeagi Nwachinemere</h1>
+      <p class="lead">Backend developer building secure, fast APIs and Web3 apps with TypeScript.</p>
+      <div class="btns">
+        <a class="btn main" href="mailto:nwachinemereibeagi@gmail.com">Email me</a>
+        <a class="btn" href="/IBEAGI-NWACHINEMERE-CV.pdf">Download CV</a>
+      </div>
+    </div>
+    <div class="resp" role="img" aria-label="Summary shown as an API response: backend developer at Speirah with 3+ years of experience, based in Enugu, Nigeria, open to work">
+      <header><span>GET /developer/nwachee</span><span class="ok">200 OK</span></header>
+<pre aria-hidden="true">{
+  <span class="k">"role"</span>: "Backend Developer",
+  <span class="k">"company"</span>: "Speirah",
+  <span class="k">"stack"</span>: ["TypeScript", "Node.js",
+            "NestJS", "PostgreSQL", "Redis"],
+  <span class="k">"experience"</span>: "3+ years",
+   <span class="k">"focus"</span>: ["clean architecture",
+            "testing &amp; CI/CD", "database design",
+            "smart contract auditing"],
+  <span class="k">"location"</span>: "Enugu, Nigeria",
+  <span class="k">"open_to_work"</span>: <span class="t">true</span>
+}</pre>
+    </div>
+  </div>
+
+  <section id="work">
+    <h2>Experience</h2>
+    <div class="job"><time>Oct 2025 – now</time><div><h3>Backend Developer <span class="co">at Speirah</span></h3>
+      <ul>
+        <li>Lead backend architecture for a healthcare platform covering patient exercise routines, clinician dashboards and predictive health analytics.</li>
+        <li>Built REST APIs for patients, clinicians, parents and admins, secured with JWT refresh token rotation and role-based access control.</li>
+        <li>Tuned PostgreSQL queries and added Redis caching to handle concurrent load while keeping patient data private.</li>
+      </ul></div></div>
+    <div class="job"><time>Sep – Oct 2023</time><div><h3>Backend Developer <span class="co">at HNG Tech</span></h3>
+      <ul>
+        <li>Built a Customer Purchase Dashboard for high-volume daily transactions, replacing manual data compilation.</li>
+        <li>Cut query times with indexing and schema redesign, and automated the reporting data pipeline.</li>
+      </ul></div></div>
+    <div class="job"><time>Nov 2022 – Jul 2023</time><div><h3>Backend Developer <span class="co">at Genesys Tech Hub</span></h3>
+      <ul>
+        <li>Led backend architecture for an LMS and the PostIt social platform using a microservices pattern.</li>
+        <li>Improved API response times with database optimization and caching; introduced code review standards and automated testing.</li>
+      </ul></div></div>
+    <p class="edu">B.Tech Computer Science, Federal University of Technology, Owerri (2018 – 2024)</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="feature">
+      <h3>Speirah</h3>
+      <div>
+        <p>Spine-health platform with guided routines, progress tracking and clinician dashboards. Live on the iOS App Store.</p>
+        <ul class="tags"><li>TypeScript</li><li>PostgreSQL</li><li>Redis</li><li>JWT</li></ul>
+        <p class="links"><a href="https://speirah.com">speirah.com</a></p>
+      </div>
+    </article>
+
+    <article class="feature">
+      <h3>BatchSend</h3>
+      <div>
+        <p>Gas-optimized batch ERC20 airdrop tool: send tokens to many wallets in one flow on any EVM chain. Next.js front end, Solidity contracts tested with Foundry.</p>
+        <ul class="tags"><li>Next.js</li><li>Solidity</li><li>Foundry</li></ul>
+        <p class="links"><a href="https://batchsend.vercel.app/">Live demo</a><a href="https://github.com/nwachee/batchsend">GitHub</a></p>
+      </div>
+    </article>
+
+    <article class="feature">
+      <h3>Web3Ts</h3>
+      <div>
+        <p>Minimal "Buy Me a Coffee" funding dApp. Connect MetaMask, fund a deployed FundMe contract with ETH, read its balance and withdraw as owner. Includes a local Anvil snapshot for testing.</p>
+        <ul class="tags"><li>TypeScript</li><li>Viem</li><li>Vite</li><li>Anvil</li></ul>
+        <p class="links"><a href="https://github.com/nwachee/web3Ts">GitHub</a></p>
+      </div>
+    </article>
+
+    <div class="more">
+      <h3>More work</h3>
+      <div class="row">
+        <h4>DeFi Stablecoin</h4>
+        <p>Users deposit WETH or WBTC as collateral to mint a USD-pegged token. Solidity and Foundry. <a href="https://github.com/nwachee/foundDeFI">GitHub</a></p>
+      </div>
+      <div class="row">
+        <h4>Customer Purchase Dashboard</h4>
+        <p>Real-time business insights from high-volume transaction data, with an automated aggregation pipeline. Node.js and PostgreSQL.</p>
+      </div>
+      <div class="row">
+        <h4>LMS and PostIt</h4>
+        <p>Learning management system and social platform split into microservices for easier scaling and deployment. Node.js and MongoDB.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Languages</dt><dd><ul class="chips"><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>Solidity</li></ul></dd>
+      <dt>Backend</dt><dd><ul class="chips"><li>Node.js</li><li>NestJS</li><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li></ul></dd>
+      <dt>Web3</dt><dd><ul class="chips"><li>Foundry</li><li>Viem</li><li>Anvil</li><li>Smart contract security</li></ul></dd>
+      <dt>Frontend</dt><dd><ul class="chips"><li>React</li><li>Next.js</li></ul></dd>
+      <dt>Tooling</dt><dd><ul class="chips"><li>Git</li><li>Docker</li><li>CI/CD</li><li>Jest</li><li>Supertest</li></ul></dd>
+      <dt>Practices</dt><dd><ul class="chips"><li>JWT auth</li><li>RBAC</li><li>API design</li><li>Database optimization</li></ul></dd>
+    </dl>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Let's talk</h2>
+    <p>I'm open to backend and full-stack roles, remote or in Nigeria. Email is the fastest way to reach me.</p>
+    <div class="btns">
+      <a class="btn main" href="mailto:nwachinemereibeagi@gmail.com">nwachinemereibeagi@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/nwachee/">LinkedIn</a>
+      <a class="btn" href="https://github.com/nwachee">GitHub</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Ibeagi Nwachinemere</div>
+</footer>
+
+<script>
+(function(){
+  var links=document.querySelectorAll('.top nav a');
+  var map={};
+  links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(a){a.removeAttribute('aria-current')});
+        var a=map[e.target.id]; if(a)a.setAttribute('aria-current','true');
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  Object.keys(map).forEach(function(id){var el=document.getElementById(id); if(el)io.observe(el)});
+})();
+</script>
+</body>
+</html>
